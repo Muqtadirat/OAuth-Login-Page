@@ -1,19 +1,34 @@
-import { GoogleLogin } from "@react-oauth/google";
+import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import Form from "./components/Form";
 import "./App.css";
 
-function App() {
-  const responseMessage = (response) => {
-    console.log(response);
-  };
+function CustomButton({ onClick, children }) {
+  return <button onClick={onClick}>{children}</button>;
+}
 
-  const errorMessage = (error) => {
-    console.log(error);
-  };
+function App() {
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => console.log(tokenResponse),
+  });
 
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+      <header>
+        <h1>Login To Your Account</h1>
+      </header>
+
+      <Form />
+      <CustomButton onClick={() => login()}>
+        Sign in with Google 🚀
+      </CustomButton>
+      <GoogleLogin
+        onSuccess={(credentialResponse) => {
+          console.log(credentialResponse);
+        }}
+        onError={() => {
+          console.log(`Login Failed`);
+        }}
+      />
     </div>
   );
 }
