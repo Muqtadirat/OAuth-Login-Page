@@ -1,4 +1,4 @@
-import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLogin } from "@react-oauth/google";
 import Form from "./components/Form";
 import "./App.css";
 
