@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { GoogleLogin } from "@react-oauth/google";
 import "./App.css";
 
