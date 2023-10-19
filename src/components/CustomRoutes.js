@@ -7,7 +7,7 @@ function CustomRoutes() {
   return (
     <Routes>
       <Route path="/LoginForm" element={<LoginForm />} />
-      <Route path="/Form" element={<Form />} />
+      <Route path="/" element={<Form />} />
     </Routes>
   );
 }
