@@ -87,7 +87,10 @@ function Form() {
         </div>
 
         <p>
-          Already a user? <Link to="/LoginForm">Login</Link>
+          Already a user?{" "}
+          <Link to="/LoginForm" className="text-indigo-500 font-semibold">
+            Login
+          </Link>
         </p>
       </form>
     </div>

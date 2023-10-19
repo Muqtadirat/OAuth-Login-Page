@@ -20,8 +20,8 @@ function LoginForm() {
   return (
     <div className="Form mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form id="login-form" className="space-y-4" action="#" method="POST">
-        <h1 className="mt-10 mb-5 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">
-          Sign in
+        <h1 className="mt-10 mb-6 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">
+          Welcome Back!👋
         </h1>
 
         <label
@@ -49,13 +49,13 @@ function LoginForm() {
           required
         />
 
-        <input type="checkbox" id="forgotPass" value="LogRemember" />
-        <label htmlFor="rememberMe">Remember Me</label>
         <input
           type="submit"
           value="Sign in"
           className="flex w-full justify-center rounded-lg bg-indigo-600 px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer "
         />
+
+        <p className="my-3 text-center">or</p>
 
         <div>
           {" "}
@@ -65,7 +65,10 @@ function LoginForm() {
         </div>
 
         <p>
-          Not a user? <Link to="/Form">Sign Up</Link>
+          Not a user?{" "}
+          <Link to="/" className="text-indigo-500 font-semibold">
+            Sign Up
+          </Link>
         </p>
       </form>
     </div>
