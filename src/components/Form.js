@@ -23,7 +23,7 @@ function Form() {
       <h1 className="mt-10 mb-5 text-center text-4xl font-bold leading-9 tracking-tight text-gray-900">
         Sign up
       </h1>
-      <form id="signIn-form" className="space-y-4" action="#" method="POST">
+      <form id="signUp-form" className="space-y-4" action="#" method="POST">
         <label
           htmlFor="email"
           className="block text-md font-medium leading-6 text-gray-900 text-left"
@@ -87,7 +87,7 @@ function Form() {
         </div>
 
         <p>
-          Already a user? <Link to="./LoginForm.js"></Link>
+          Already a user? <Link to="/LoginForm">Login</Link>
         </p>
       </form>
     </div>
