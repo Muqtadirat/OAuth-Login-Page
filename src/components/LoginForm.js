@@ -1,4 +1,22 @@
+import { useGoogleLogin } from "@react-oauth/google";
+import { Link } from "react-router-dom";
+
+function CustomButton({ onClick, children }) {
+  return (
+    <button
+      className="flex w-full justify-center rounded-lg bg-indigo-600 px-3 py-3 mb-5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+}
+
 function LoginForm() {
+  const login = useGoogleLogin({
+    onSuccess: (tokenResponse) => console.log(tokenResponse),
+  });
+
   return (
     <div className="Form mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form id="login-form" className="space-y-4" action="#" method="POST">
@@ -38,6 +56,17 @@ function LoginForm() {
           value="Sign in"
           className="flex w-full justify-center rounded-lg bg-indigo-600 px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer "
         />
+
+        <div>
+          {" "}
+          <CustomButton onClick={() => login()}>
+            Sign in with Google 🚀
+          </CustomButton>
+        </div>
+
+        <p>
+          Not a user? <Link to="/Form">Sign Up</Link>
+        </p>
       </form>
     </div>
   );
