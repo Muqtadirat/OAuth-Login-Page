@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CustomButton({ onClick, children }) {
   const handleClick = (e) => {
@@ -22,8 +22,6 @@ function Form() {
   const login = useGoogleLogin({
     onSuccess: (tokenResponse) => console.log(tokenResponse),
   });
-
-  const navigate = useNavigate();
 
   //States for form fields
   const [email, setEmail] = useState("");
@@ -60,7 +58,7 @@ function Form() {
     if (password !== confirmPassword) {
       alert(`Passwords don't match`);
     } else {
-      alert(`Setting up profile...`)
+      alert(`Setting up profile...`);
     }
   };
 
