@@ -1,12 +1,12 @@
 import React from "react";
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Form from "./Form";
 import LoginForm from "./LoginForm";
 
 function CustomRoutes() {
   return (
     <Routes>
-      <Route path="/LoginForm" element={<LoginForm />} />
+      <Route path="/loginform" element={<LoginForm />} />
       <Route path="/" element={<Form />} />
     </Routes>
   );

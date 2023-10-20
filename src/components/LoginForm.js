@@ -19,7 +19,7 @@ function LoginForm() {
 
   return (
     <div className="Form mt-10 sm:mx-auto sm:w-full sm:max-w-sm ">
-      <form id="login-form" className="space-y-4 " action="#" method="POST">
+      <form id="login-form" className="space-y-4 " action="#" method="#">
         <h1 className="mt-10 mb-6 text-center text-4xl font-bold leading-9 tracking-tight text-violet-500">
           Welcome Back!👋
         </h1>
@@ -34,6 +34,7 @@ function LoginForm() {
           type="text"
           id="email"
           name="email"
+          autoComplete="on"
           required
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
         />
@@ -46,6 +47,7 @@ function LoginForm() {
         <input
           type="password"
           name="password"
+          autoComplete="on"
           className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
           required
         />
