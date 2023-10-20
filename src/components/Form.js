@@ -28,30 +28,22 @@ function Form() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  //States for checking errors
-  const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState(false);
-
   //Handling email and pass
   const handleEmail = (e) => {
     setEmail(e.target.value);
-    setSubmitted(false);
   };
 
   const handlePassword = (e) => {
     setPassword(e.target.value);
-    setSubmitted(false);
   };
 
   const handleConfirmPassword = (e) => {
     setConfirmPassword(e.target.value);
-    setSubmitted(false);
   };
 
   //Handling form submission
   const handleSubmit = (e) => {
     if (email === "" || password === "" || confirmPassword === "") {
-      setError(true);
       return;
     }
 
